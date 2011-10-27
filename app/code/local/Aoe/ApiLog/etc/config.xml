@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+	<modules>
+		<Aoe_ApiLog>
+			<active>true</active>
+			<codePool>local</codePool>
+			<version>0.0.1</version>
+		</Aoe_ApiLog>
+	</modules>
+
+	<global>
+		<models>
+			<apilog>
+				<class>Aoe_ApiLog_Model</class>
+			</apilog>
+		</models>
+		<helpers>
+			<apilog>
+				<class>Aoe_ApiLog_Helper</class>
+			</apilog>
+		</helpers>
+		<events>
+			<controller_action_postdispatch_api>
+				<observers>
+					<apilog>
+						<type>singleton</type>
+						<class>apilog/observer</class>
+						<method>controller_action_predispatch_api</method>
+					</apilog>
+				</observers>
+			</controller_action_postdispatch_api>
+		</events>
+	</global>
+
+	<default>
+		<dev>
+			<aoe_apilog>
+				<enablelogging>1</enablelogging>
+				<logformat><![CDATA[
+REQUEST URI: ###REQUESTURI###
+CLIENT IP: ###CLIENTIP###
+REQUEST:
+====================
+###REQUEST###
+
+RESPONSE:
+====================
+###RESPONSE###
+]]></logformat>
+				<logfilename>api.log</logfilename>
+			</aoe_apilog>
+		</dev>
+	</default>
+
+</config>

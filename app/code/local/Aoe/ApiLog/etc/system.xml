@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<config>
+	<sections>
+
+		<dev translate="label" module="apilog">
+			<groups>
+				<aoe_apilog translate="label">
+					<label>AOE ApiLog</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1000</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enablelogging translate="label">
+							<label>Enable logging</label>
+							<frontend_type>select</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+						</enablelogging>
+						<logfilename translate="label">
+							<label>Log filename</label>
+							<comment><![CDATA[in <rootfolder>/var/log/]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</logfilename>
+						<logformat>
+							<label>Log format</label>
+							<comment><![CDATA[Available markers: ###REQUESTURI###, ###CLIENTIP###, ###REQUEST###, ###RESPONSE###]]></comment>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</logformat>
+					</fields>
+				</aoe_apilog>
+			</groups>
+		</dev>
+	</sections>
+</config>
