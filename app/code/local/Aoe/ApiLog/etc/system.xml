@@ -23,7 +23,7 @@
 						</enablelogging>
 						<logfilename translate="label">
 							<label>Log filename</label>
-							<comment><![CDATA[in <rootfolder>/var/log/]]></comment>
+							<comment><![CDATA[in [rootfolder]/var/log/]]></comment>
 							<frontend_type>text</frontend_type>
 							<sort_order>30</sort_order>
 							<show_in_default>1</show_in_default>
