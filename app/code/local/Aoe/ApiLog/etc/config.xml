@@ -26,7 +26,7 @@
 					<apilog>
 						<type>singleton</type>
 						<class>apilog/observer</class>
-						<method>controller_action_predispatch_api</method>
+						<method>controller_action_postdispatch_api</method>
 					</apilog>
 				</observers>
 			</controller_action_postdispatch_api>

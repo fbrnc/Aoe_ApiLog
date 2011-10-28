@@ -12,7 +12,7 @@ class Aoe_ApiLog_Model_Observer {
 	 *
 	 * @param Varien_Event_Observer $observer
 	 */
-	public function controller_action_predispatch_api(Varien_Event_Observer $observer) {
+	public function controller_action_postdispatch_api(Varien_Event_Observer $observer) {
 
 		$enable = Mage::getStoreConfig('dev/aoe_apilog/enablelogging');
 		if (!$enable) {
